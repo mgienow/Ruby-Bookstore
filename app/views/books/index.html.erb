@@ -1,0 +1,17 @@
+<h1>Lulu's Unbelievable Book Bank</h1>
+   <!-- <ul>
+        <li><%= @books[0].title %></li>
+        <li><%= @books[1].title %></li>
+        <li><%= @books[2].title %></li>
+        <li><%= @books[3].title %></li>
+        <li><%= @books[4].title %></li>
+        <li><%= @books[5].title %></li>
+        <li><%= @books[6].title %></li>
+    </ul> -->
+    <ul>
+        <% @books.each do |book| %>
+            <li><%= link_to(book.title, book_path(book)) %>, by <%= book.author %></li>
+        <% end %>
+    </ul>
+    
+   
